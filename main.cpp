@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 
     int max_value = 100;
 
-    if (argc > 0) {
+    if (argc > 1) {
         std::string arg1_value = argv[1];
         if (arg1_value == "-max") {
             if (argc < 3) {
