@@ -4,14 +4,9 @@
 
 #include "high_scores.h"
 
-int high_scores(int attempts_count) {
+int high_scores(int attempts_count, std::string user_name) {
 
 	const std::string high_scores_filename = "high_scores.txt";
-
-	// Ask about name
-	std::cout << "Hi! Enter your name, please:" << std::endl;
-	std::string user_name;
-	std::cin >> user_name;
 
 	// Write new high score to the records table
 	{

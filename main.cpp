@@ -12,15 +12,20 @@ int main(int argc, char** argv) {
     int max_value = 100;
 
     if (argc > 0) {
-        std::string arg1_value = argv[0];
+        std::string arg1_value = argv[1];
         if (arg1_value == "-max") {
-            if (argc < 2) {
+            if (argc < 3) {
                 std::cout << "Wrong usage! The argument '-max' requires some value!" << std::endl;
                 return -1;
             }
-            max_value = std::stoi(argv[1]);
+            max_value = std::stoi(argv[2]);
         }
     }
+
+    // Ask about name
+    std::cout << "Hi! Enter your name, please:" << std::endl;
+    std::string user_name;
+    std::cin >> user_name;
 
     std::srand(std::time(nullptr)); // use current time as seed for random generator
 
@@ -28,9 +33,7 @@ int main(int argc, char** argv) {
 
     int count = check_value(random_value);
 
-    high_scores(count);
-
-    std::cout << random_value << std::endl;
+    high_scores(count, user_name);
 
     return 0;
 }

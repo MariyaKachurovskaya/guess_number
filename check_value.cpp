@@ -20,7 +20,7 @@ int check_value(int target_value) {
             std::cout << "less than " << current_value << std::endl;
         }
         else {
-            std::cout << "you win!" << std::endl;
+            std::cout << "you win! Count of tries: " << count <<std::endl;
             break;
         }
 
